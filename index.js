@@ -23,7 +23,7 @@ if (message && branchName) {
     if (err) {
       throw new Error("something is wrong");
     }
-    exec(`git commit -m ${message}`, (err, stdout, errorbycommand) => {
+    exec(`git commit -m "${message}"`, (err, stdout, errorbycommand) => {
       if (err) {
         throw new Error("something is wrong");
       }
