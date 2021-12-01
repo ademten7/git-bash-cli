@@ -27,6 +27,7 @@ if (message && branchName) {
       if (err) {
         throw new Error("something is wrong");
       }
+      console.log(errorbycommand);
       exec(`git push origin ${branchName}`, (err, stdout, errorbycommand) => {
         if (err) {
           throw new Error("something is wrong");
