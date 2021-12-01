@@ -25,6 +25,7 @@ if (message && branchName) {
     }
     exec(`git commit -m "${message}"`, (err, stdout, errorbycommand) => {
       if (err) {
+        console.log(stdout);
         throw new Error("something is wrong");
       }
       console.log(errorbycommand);
