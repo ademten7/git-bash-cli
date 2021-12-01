@@ -21,7 +21,6 @@ if (message && branchName) {
 
   exec("git add .", (err, stdout, errorbycommand) => {
     if (err) {
-      console.log(stdout);
       throw new Error("something is wrong");
     }
     exec(`git commit -m "${message}"`, (err, stdout2, errorbycommand) => {
